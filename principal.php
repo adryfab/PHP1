@@ -1,4 +1,4 @@
-<? include ("bloqueDeSeguridad.php"); ?>
+<?php include ("bloqueDeSeguridad.php"); ?>
 <HTML>
   <HEAD>
 	<TITLE>Ingreso</TITLE>
@@ -20,18 +20,9 @@
 		<td>
 		<?php
 			require 'conexion.php';
-			
-		  //$host='mysql6.000webhost.com';
-		  //$host='localhost';
-		  //$user='a5048790_ProDes';
-		  //$user='root';
-		  //$pass='ProDes123';
-		  //$pass='';
-		  
+	  
 		  $conexion=mysql_connect($host,$user,$pass);
-		  //mysql_select_db('a5048790_ProDes',$conexion);
 		
-		  //$consulta2 = mysql_query("Select * from tipo where estado = 'A'",$conexion)
 		  $consulta2 = mysql_query("Select * from tipo where estado = 'A'")
 			or die ("Fallo la consulta");
 		  $nfila = mysql_num_rows ($consulta2);
@@ -48,14 +39,7 @@
 	  <tr>
 		<td>Categoria: </td>
 		<td>
-		<?php
-		  // $host='mysql6.000webhost.com';
-		  // $user='a5048790_ProDes';
-		  // $pass='ProDes123';
-		  //$conexion=mysql_connect($host,$user,$pass);
-		  //mysql_select_db('a5048790_ProDes',$conexion);
-		
-		  //$consulta2 = mysql_query("Select * from categoria where estado = 'A'",$conexion)
+		<?php		
 		  $consulta2 = mysql_query("Select * from categoria where estado = 'A'")
 			or die ("Fallo la consulta");
 		  $nfila = mysql_num_rows ($consulta2);
@@ -73,13 +57,6 @@
 		<td>Marca: </td>
 		<td>
 		<?php
-		  // $host='mysql6.000webhost.com';
-		  // $user='a5048790_ProDes';
-		  // $pass='ProDes123';
-		  // $conexion=mysql_connect($host,$user,$pass);
-		  // mysql_select_db('a5048790_ProDes',$conexion);
-		
-		  //$consulta2 = mysql_query("Select * from marca where estado = 'A'",$conexion)
 		  $consulta2 = mysql_query("Select * from marca where estado = 'A'")
 			or die ("Fallo la consulta");
 		  $nfila = mysql_num_rows ($consulta2);
@@ -97,13 +74,6 @@
 		<td>Producto: </td>
 		<td>
 		<?php
-		  // $host='mysql6.000webhost.com';
-		  // $user='a5048790_ProDes';
-		  // $pass='ProDes123';
-		  // $conexion=mysql_connect($host,$user,$pass);
-		  // mysql_select_db('a5048790_ProDes',$conexion);
-		
-		  //$consulta2 = mysql_query("Select * from producto where estado = 'A'",$conexion)
 		  $consulta2 = mysql_query("Select * from producto where estado = 'A'")
 			or die ("Fallo la consulta");
 		  $nfila = mysql_num_rows ($consulta2);
