@@ -1,4 +1,4 @@
-<?include ("bloqueDeSeguridad.php");?>
+<? include ("bloqueDeSeguridad.php"); ?>
 <HTML>
   <HEAD>
 	<TITLE>Ingreso</TITLE>

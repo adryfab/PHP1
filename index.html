@@ -5,14 +5,19 @@
 </head>
 
 <body>
-  <H3>INGRESO DE USUARIO Y CONTRASEÑA</H3>
-  
-	<?if ($_GET["errorusuario"]=="si"){?>
+  <H3>INGRESO DE USUARIO Y CONTRASEÑA</H3>  
+	<!-- <?php if ($_GET["errorusuario"]=="si"){?> -->
+	<?php 
+		if (isset($_GET["errorusuario"]) && $_GET["errorusuario"]==”si”){
+	?>
 	<font color="red"><b>Datos incorrectos</b></font>
-	<?}else{?>
+	<?php 
+		}else{
+	?>
 	Introduce tu nombre de usuario y contraseña
-	<?}?>
-
+	<?php 
+		}
+	?>
 <!--   <SCRIPT  language=JavaScript> 
 	function go(){
 	  if (document.form.password.value=='CONTRASEÑA' && document.form.login.value=='USUARIO'){ 
