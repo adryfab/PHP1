@@ -6,7 +6,14 @@
 
 <body>
   <H3>INGRESO DE USUARIO Y CONTRASEÑA</H3>
-  <SCRIPT  language=JavaScript> 
+  
+	<?if ($_GET["errorusuario"]=="si"){?>
+	<font color="red"><b>Datos incorrectos</b></font>
+	<?}else{?>
+	Introduce tu nombre de usuario y contraseña
+	<?}?>
+
+<!--   <SCRIPT  language=JavaScript> 
 	function go(){
 	  if (document.form.password.value=='CONTRASEÑA' && document.form.login.value=='USUARIO'){ 
 		document.form.submit(); 
@@ -16,19 +23,24 @@
       } 
 	} 
   </SCRIPT> 
-  
-  <FORM name=form action="principal.php" method="post">
+ -->  
+ 
+  <!-- <FORM name=form action="principal.php" method="post"> -->
+  <FORM name=form action="autenticacion.php" method="post">
     <table border='0'; style="background-color:33F4FF; color:blue; font-size:23px">
 	  <tr>
 		<td>Usuario: </td>
-		<td><input type=text name=login /></td>
+		<!-- <td><input type=text name=login /></td> -->
+		<td><input name="usuario" size="25" value=""/></td>
 	  </tr>
 	  <tr>
 		<td>Contraseña: </td>
-		<td><input type=password name=password /></td>
+		<!-- <td><input type=password name=password /></td> -->
+		<td><input name="contrasena" size="25" type="password"/></td>
 	  </tr>
 	  <tr>
-		<td> <INPUT onclick=go() type=button value=Acceder> </td>
+		<!-- <td> <INPUT onclick=go() type=button value=Acceder> </td> -->
+		<td><input type="submit" value="Acceder"/></td>
 	  </tr>
 	</table>
   </FORM> 

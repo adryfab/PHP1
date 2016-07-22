@@ -1,0 +1,8 @@
+http://localhost/php/
+USUARIO
+CONTRASEÑA
+http://localhost/phpmyadmin/
+
+SERVIDOR = http://promodescuento.comli.com/
+USUARIO = a5048790
+CONTRASEÑA = PromoDescuento123

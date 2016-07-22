@@ -1,0 +1,69 @@
+SERVIDORA = http://promodescuento.comli.com/
+USUARIO = a5048790
+CONTRASEÑA = PromoDescuento123
+
+--https://secure.urkund.com/account/Auth/Login--Para revisar plagio
+--http://www.anerbarrena.com/nuevos-input-html5-3739/ --Informacion de input
+http://promodescuento.comli.com/Crear_Tabla.php
+http://promodescuento.comli.com/Insercion.php
+
+ProDes123 --Base
+a5048790_ProDes
+
+http://www.livansud.com/quienes-somos
+http://tteessiiss.site88.net/
+https://www.youtube.com/watch?v=BuEFYLJx0xQ
+http://editURLhere/appinventor/tempSaveFile.php
+
+
+http://casamadrugada.net/tutoriales/php/como-almacenar-archivos-imagenes-en-mysql-utilizando-php/------------
+https://www.youtube.com/watch?v=gl2ibXleGkY
+http://ingeniuz.blogspot.com/2005/05/cmo-almacenar-una-imagen-en-mysql-sql.html
+https://www.youtube.com/watch?v=E57R8gFnNlU
+
+http://acciontrabajo.ec/cgi-bin/jobs_display_vacancy_ver_oferta.cgi?id=21733
+
+http://www.taringa.net/post/apuntes-y-monografias/15859281/Destripando-una-Aplicacion-Android.html
+http://www.tuappinvetorandroid.com/aprender/c%C3%B3digos-fuente-de-aplicaciones/
+http://www.decompileandroid.com/
+.aia
+http://kio4.com/appinventor/
+http://www.androidcreator.com/es/
+http://experimental.appinventor.mit.edu/ 
+http://ai2.appinventor.mit.edu/?locale=es_ES#5091224200937472  --App Inventor2
+https://www.youtube.com/watch?v=qS94pPMt9jQ
+http://www.checkio.org/profile/login/
+http://www.tuappinvetorandroid.com/aprender/videotutoriales/tiniwebdb/
+https://members.000webhost.com/login
+tteessiiss.site88.net
+https://neocities.org/ ---MiriadaX
+http://vishub.org/excursions/2209.full ---MiriadaX Editor
+
+--Base de TinyWebDB 
+http://soloelectronicos.com/2014/04/22/crear-una-base-de-datos-web-python-2-7/
+http://baseweb-1258.appspot.com/ 
+
+https://www.youtube.com/watch?v=rYtazOKryBM --ejemplo2
+https://www.youtube.com/watch?v=0CYSImKTf7A ----
+https://www.youtube.com/watch?v=iAaiVAPFf8E
+https://www.youtube.com/watch?v=BKPyUyLS0hA
+
+https://www.youtube.com/watch?v=2zJD4ASpfW8&index=1&list=PL7EA29F3B739286CA --curso android
+
+Create a Web Database
+http://www.javaya.com.ar/androidya/androidstudioya/index.php?inicio=0
+
+
+
+---CONECTAR APPINVENTOR A MYSQL
+http://ai.kittywolf.net/index.php/PHP_TinyWebDB_with_MySQL
+http://ai.kittywolf.net/index.php/WebMysql
+https://translate.google.com.ec/translate?hl=es&sl=en&u=http://www.newthinktank.com/2014/05/connect-app-inventor-mysql-database/&prev=search
+https://www.youtube.com/watch?v=fvH865tKOLE&feature=youtu.be 35:00  custcsv.php
+https://puravidaapps.com/mysql.php
+http://puravidaapps.com/sqlite.php
+
+--ESPAÑOL
+http://kio4.com/appinventor/8BfirebaseDB.htm
+http://kio4.com/appinventor/8DfirebaseDB_datos.htm
+http://kio4.com/appinventor/8archivo_basedatos.htm ???

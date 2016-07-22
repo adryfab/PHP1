@@ -1,16 +1,32 @@
-<?include ("bloqueDeSeguridad.php");?>
 <HTML>
   <HEAD>
 	<TITLE>Ingreso</TITLE>
   </HEAD>
   <BODY>
 	<H2>PROMOCIONES Y DESCUENTOS</H2>
-		
+	
+	<script language=JavaScript>
+	function validarSiNumero(numero, nombre){
+    if (!/^([0-9])*$/.test(numero)){
+      alert("El valor " + numero + " no es un número");
+	  if (nombre=="codigo"){
+	  document.form.codigo.value="";
+	  document.form.codigo.focus();}
+	  if (nombre=="precio"){
+	  document.form.precio.value="";
+	  document.form.precio.focus();}
+	  if (nombre=="descuento"){
+	  document.form.descuento.value="";
+	  document.form.descuento.focus();}}
+	}
+	</script>
+
+	
 	<FORM name=form action="ingreso.php" method="post" enctype="multipart/form-data">
 	<table border='3'; style="background-color:yellow; color:blue; font-size:23px">
 	  <tr>
-		<td>Codigo: </td>
-		<td><INPUT type=number name=codigo SIZE=10 min="1" disable=”disabled”></td>
+		<td>Código: </td>
+		<td><INPUT type=number name=codigo SIZE=10 min="1"></td>
 	  </tr>
 	</table>
 	<br><br>
@@ -19,20 +35,13 @@
 		<td>Tipo: </td>
 		<td>
 		<?php
-			require 'conexion.php';
-			
-		  //$host='mysql6.000webhost.com';
-		  //$host='localhost';
-		  //$user='a5048790_ProDes';
-		  //$user='root';
-		  //$pass='ProDes123';
-		  //$pass='';
-		  
+		  $host='mysql6.000webhost.com';
+		  $user='a5048790_ProDes';
+		  $pass='ProDes123';
 		  $conexion=mysql_connect($host,$user,$pass);
-		  //mysql_select_db('a5048790_ProDes',$conexion);
+		  mysql_select_db('a5048790_ProDes',$conexion);
 		
-		  //$consulta2 = mysql_query("Select * from tipo where estado = 'A'",$conexion)
-		  $consulta2 = mysql_query("Select * from tipo where estado = 'A'")
+		  $consulta2 = mysql_query("Select * from tipo where estado = 'A'",$conexion)
 			or die ("Fallo la consulta");
 		  $nfila = mysql_num_rows ($consulta2);
 		  echo "<select name='tipo'>";
@@ -46,17 +55,16 @@
 		</td>
 	  </tr>
 	  <tr>
-		<td>Categoria: </td>
+		<td>Categoría: </td>
 		<td>
 		<?php
-		  // $host='mysql6.000webhost.com';
-		  // $user='a5048790_ProDes';
-		  // $pass='ProDes123';
-		  //$conexion=mysql_connect($host,$user,$pass);
-		  //mysql_select_db('a5048790_ProDes',$conexion);
+		  $host='mysql6.000webhost.com';
+		  $user='a5048790_ProDes';
+		  $pass='ProDes123';
+		  $conexion=mysql_connect($host,$user,$pass);
+		  mysql_select_db('a5048790_ProDes',$conexion);
 		
-		  //$consulta2 = mysql_query("Select * from categoria where estado = 'A'",$conexion)
-		  $consulta2 = mysql_query("Select * from categoria where estado = 'A'")
+		  $consulta2 = mysql_query("Select * from categoria where estado = 'A'",$conexion)
 			or die ("Fallo la consulta");
 		  $nfila = mysql_num_rows ($consulta2);
 		  echo "<select name='categoria'>";
@@ -73,14 +81,13 @@
 		<td>Marca: </td>
 		<td>
 		<?php
-		  // $host='mysql6.000webhost.com';
-		  // $user='a5048790_ProDes';
-		  // $pass='ProDes123';
-		  // $conexion=mysql_connect($host,$user,$pass);
-		  // mysql_select_db('a5048790_ProDes',$conexion);
+		  $host='mysql6.000webhost.com';
+		  $user='a5048790_ProDes';
+		  $pass='ProDes123';
+		  $conexion=mysql_connect($host,$user,$pass);
+		  mysql_select_db('a5048790_ProDes',$conexion);
 		
-		  //$consulta2 = mysql_query("Select * from marca where estado = 'A'",$conexion)
-		  $consulta2 = mysql_query("Select * from marca where estado = 'A'")
+		  $consulta2 = mysql_query("Select * from marca where estado = 'A'",$conexion)
 			or die ("Fallo la consulta");
 		  $nfila = mysql_num_rows ($consulta2);
 		  echo "<select name='marca'>";
@@ -97,14 +104,13 @@
 		<td>Producto: </td>
 		<td>
 		<?php
-		  // $host='mysql6.000webhost.com';
-		  // $user='a5048790_ProDes';
-		  // $pass='ProDes123';
-		  // $conexion=mysql_connect($host,$user,$pass);
-		  // mysql_select_db('a5048790_ProDes',$conexion);
+		  $host='mysql6.000webhost.com';
+		  $user='a5048790_ProDes';
+		  $pass='ProDes123';
+		  $conexion=mysql_connect($host,$user,$pass);
+		  mysql_select_db('a5048790_ProDes',$conexion);
 		
-		  //$consulta2 = mysql_query("Select * from producto where estado = 'A'",$conexion)
-		  $consulta2 = mysql_query("Select * from producto where estado = 'A'")
+		  $consulta2 = mysql_query("Select * from producto where estado = 'A'",$conexion)
 			or die ("Fallo la consulta");
 		  $nfila = mysql_num_rows ($consulta2);
 		  echo "<select name='producto'>";
@@ -118,19 +124,20 @@
 		</td>
 	  </tr>
 	  <tr>
-		<td>Titulo: </td>
+		<td>Título: </td>
 		<td><INPUT type=text name=titulo SIZE=10></td>
 	  </tr>
 	  <tr>
 		<td>Precio: </td>
-		<td><INPUT type=number name=precio SIZE=5 min="1" max="1000000" step="any"></td>
+		<td><INPUT type=text name=precio SIZE=10 onChange="validarSiNumero(this.value, this.name);"></td>
+		<input type="number" name="edad" min="18" max="99" step="5"  required="required">
 	  </tr>
 	  <tr>
 		<td>Descuento: </td>
-		<td><INPUT type=number name=descuento SIZE=5 min="1" max="100"></td>
+		<td><INPUT type=text name=descuento SIZE=10 onChange="validarSiNumero(this.value, this.name);"></td>
 	  </tr>
 	  <tr>
-		<td>Descripcion: </td>
+		<td>Descripción: </td>
 		<td><textarea name="descripcion" cols="50" rows="4"></textarea></td>
 	  </tr>
 	  <tr>
