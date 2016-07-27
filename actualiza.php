@@ -54,14 +54,9 @@
 				echo 'Error al actualizar los datos <br>';
 			}else{
 				echo 'Los datos se actualizaron correctamente <br>';
-	    
-				// $consulta2 = mysql_query("SELECT max(cod_promo_desc) as maximo FROM promo_desc WHERE estado = 'A'")
-				// or die ("Fallo la consulta"); 
-				// $fila = mysql_fetch_array($consulta2);
-				// $codigo = $fila["maximo"];
-        
+	            
         //Se verifica si hay una imagen insertada anteriormente
-        //Si existe una imagen se actualiza, si no existe se insertada
+        //Si existe una imagen se actualiza, si no existe se inserta
         $datos="SELECT cod_imagen FROM imagenes WHERE cod_promo_desc = ";
         $datos=$datos.$codigo;
         
@@ -93,32 +88,41 @@
 						$data = mysql_escape_string($data);
             
             //echo "codimg=".$codimg;
+            $name = $_FILES["imagen"]["name"];
+            $lugar = "imagen/".$name;
             
             if ($codimg=="")
             {
-              $datos="INSERT INTO imagenes (cod_promo_desc, imagen, tipo_imagen, estado) VALUES (";
+              $datos="INSERT INTO imagenes (cod_promo_desc, imagen, tipo_imagen, nombre, estado) VALUES (";
               $datos=$datos.$codigo.", '";
               $datos=$datos.$data."', '";
-              $datos=$datos.$tipo."', ";
+              $datos=$datos.$tipo."', '";
+              $datos=$datos.$name."', ";
               $datos=$datos."'A')";
             } else {
               $datos="UPDATE imagenes SET "; 
               $datos=$datos."imagen = '";
               $datos=$datos.$data."', ";
               $datos=$datos."tipo_imagen = '";
-              $datos=$datos.$tipo."' ";
+              $datos=$datos.$tipo."', ";
+              $datos=$datos."nombre = '";
+              $datos=$datos.$name."' ";
               $datos=$datos."WHERE cod_promo_desc = ";
               $datos=$datos.$codigo;              
             }
 
             //echo $datos;
             
-            $resultado = mysql_query($datos);
-            if ($resultado){
-							echo "el archivo ha sido actualizado exitosamente";
-						} else {
-							echo "ocurrio un error al actualizar el archivo.";
-						}
+            if(move_uploaded_file($imagen_temporal,$lugar)){
+              $resultado = mysql_query($datos);
+              if ($resultado){
+                echo "el archivo ha sido actualizado exitosamente";
+              } else {
+                echo "ocurrio un error al actualizar el archivo.";
+              }
+            } else {
+              echo "Error al mover archivo a ruta";
+            }
 					} else {
 						echo "archivo no permitido, es tipo de archivo prohibido o excede el tamano de $limite_kb Kilobytes";
 					}
