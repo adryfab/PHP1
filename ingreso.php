@@ -72,8 +72,8 @@
             $lugar = "imagen/".$name;
             
             if(move_uploaded_file($imagen_temporal,$lugar)){
-              $resultado = mysql_query("INSERT INTO imagenes (cod_promo_desc, imagen, tipo_imagen, estado) VALUES ('$codigo', 
-                '$data', '$tipo', 'A')");
+              $resultado = mysql_query("INSERT INTO imagenes (cod_promo_desc, imagen, tipo_imagen, nombre, estado) VALUES ('$codigo', 
+                '$data', '$tipo', '$name','A')");
               if ($resultado){
                 echo "el archivo ha sido copiado exitosamente";
               } else {
