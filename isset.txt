@@ -1,0 +1,4 @@
+if (isset($_POST['pelicula']))
+  {
+	  echo ' Ver Peliculas ';
+  }

@@ -109,12 +109,13 @@
 	  
 	  
 	  //Creacion de Tabla de Imagen
-	  $tabla="CREATE TABLE `imagenes` (
-		`cod_imagen` int(11) AUTO_INCREMENT PRIMARY KEY,
-		`cod_promo_desc` int(11),
-		`imagen` mediumblob,
-		`tipo_imagen` varchar(30),
-		`estado` char(1) NOT NULL,
+	  $tabla="CREATE TABLE imagenes (
+		cod_imagen int(11) AUTO_INCREMENT PRIMARY KEY,
+		cod_promo_desc int(11),
+		imagen mediumblob,
+		tipo_imagen varchar(30),
+    nombre varchar(30),
+		estado char(1) NOT NULL,
 		FOREIGN KEY (cod_promo_desc) REFERENCES promo_desc(cod_promo_desc)
 	  )";
 
