@@ -1,0 +1,23 @@
+<?php include ("bloqueDeSeguridad.php"); ?>
+<HTML>
+  <HEAD>
+	<TITLE>Menú Principal</TITLE>
+	<!-- <link rel="stylesheet" href="estilo.css"> -->
+	<link rel="stylesheet" href="w3.css">
+  </HEAD>
+  <BODY>
+	<header class="w3-container w3-red">
+	<img src="logo.png" class="w3-round-small">
+	</header>
+	<H2 class="w3-text-red">MENÚ PRINCIPAL</H2>
+	<form action="ingreso.php" method="post">
+		<div class="w3-btn-bar w3-red">
+			<button type="submit" formaction="buscar.php" 
+				class="w3-btn w3-round-xxlarge w3-red w3-text-shadow w3-padding-xxlarge">Buscar</button>
+			<button type="submit" formaction="principal.php" 
+				class="w3-btn w3-round-xxlarge w3-red w3-text-shadow w3-padding-xxlarge">Ingresar</button>
+			<input type=hidden name=ingreso value=SI>
+		</div>
+	</form>
+  </BODY>
+</HTML>

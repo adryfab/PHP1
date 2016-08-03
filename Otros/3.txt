@@ -1,0 +1,27 @@
+http://localhost/php1/
+USUARIO
+CONTRASEÑA
+http://localhost/phpmyadmin/
+
+SERVIDOR = promodescuento.comli.com
+USUARIO = a5048790
+CONTRASEÑA = PromoDescuento123
+http://promodescuento.comli.com
+
+https://www.000webhost.com/cpanel-login
+soalmaco@hotmail.com
+Iluminy159753
+
+Configuración de php (php.ini) 
+short_open_tag = On
+session.auto_start = 0
+Reiniciar el servicio
+
+http://localhost/PHP-blog/
+
+-----------------------------------------------------------------------------------------------------------
+
+http://emylianismo.blogspot.com/feeds/posts/default?alt=rss
+http://promodescuento.comli.com/rss.php
+
+-----------------------------------------------------------------------------------------------------------

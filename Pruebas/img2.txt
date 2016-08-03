@@ -1,0 +1,23 @@
+ELITE-TWO
+$ 247,68
+MODELO  ELITE-TWO
+
+Tipo de Sistema : Amplificado
+Pulgadas : 2 X15"
+Watts PMPO: 20000
+Watts RMS: 300
+Recargable : NO
+Ecualizador : Digital
+Incorporado Control Agudos / Graves: SI
+Radio: Si Bluetooth: SI
+Conexiones: XLR, RCA
+Salida Pasiva: NO
+Entradas: USB / SD, 1 entrada para micrófono
+Luces Leds: SI
+Indicador Saturación: SI
+ 
+
+ACCESORIOS
+
+Control remoto
+Fusible repuesto

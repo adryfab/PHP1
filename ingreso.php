@@ -2,19 +2,28 @@
 <HTML>
   <HEAD>
 	<TITLE>Ingreso</TITLE>
+	<!-- <link rel="stylesheet" href="estilo.css"> -->
+	<link rel="stylesheet" href="w3.css">
   </HEAD>
   <BODY>
-	<FORM name=form action="menu.html" method="post">
+	<header class="w3-container w3-red">
+	<img src="logo.png" class="w3-round-small">
+	</header>
+	<FORM name=form action="menu.php" method="post">
 	<?php
+    require 'reemplazar.php';
+
 		//$codigo = $_POST['codigo'];
 		$tipo = $_POST['tipo'];
 		$categoria = $_POST['categoria'];
 		$marca = $_POST['marca'];
 		$producto = $_POST['producto'];
 		$titulo = $_POST['titulo'];
+    $titulo = sanear_string($titulo);
 		$precio = $_POST['precio'];
 		$descuento = $_POST['descuento'];
 		$descripcion = $_POST['descripcion'];
+    $descripcion = sanear_string($descripcion);
 		$fecdes = $_POST['fecdes'];
 		$fechas = $_POST['fechas'];
 		$ingresar = $_POST['ingresar'];
@@ -62,18 +71,19 @@
 						//este es el tipo de archivo
 						$tipo = $_FILES['imagen']['type'];
 						//leer el archivo temporal en binario
-						$fp     = fopen($imagen_temporal, 'r+b');
-						$data = fread($fp, filesize($imagen_temporal));
-						fclose($fp);
+						// $fp     = fopen($imagen_temporal, 'r+b');
+						// $data = fread($fp, filesize($imagen_temporal));
+						// fclose($fp);
 						//escapar los caracteres
-						$data = mysql_escape_string($data);
+						// $data = mysql_escape_string($data);
+            $data = NULL;
             
             $name = $_FILES["imagen"]["name"];
             $lugar = "imagen/".$name;
             
             if(move_uploaded_file($imagen_temporal,$lugar)){
-              $resultado = mysql_query("INSERT INTO imagenes (cod_promo_desc, imagen, tipo_imagen, nombre, estado) VALUES ('$codigo', 
-                '$data', '$tipo', '$name','A')");
+              $resultado = mysql_query("INSERT INTO imagenes (cod_promo_desc, imagen, tipo_imagen, nombre, estado) 
+                VALUES ('$codigo', '$data', '$tipo', '$name','A')");
               if ($resultado){
                 echo "el archivo ha sido copiado exitosamente";
               } else {
@@ -90,7 +100,8 @@
 		}
 	?>
     <br>
-	<td><input type="submit" name="regresar" value="Regresar" /></td>
+	<td><input type="submit" name="regresar" value="Regresar" 
+    class="w3-btn w3-round-xxlarge w3-red w3-text-shadow"/></td>
 	</FORM>
 	</BODY>	
 </HTML>

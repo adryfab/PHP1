@@ -2,9 +2,14 @@
 <HTML>
   <HEAD>
 	<TITLE>Actualiza</TITLE>
+	<!-- <link rel="stylesheet" href="estilo.css"> -->
+	<link rel="stylesheet" href="w3.css">
   </HEAD>
   <BODY>
-	<FORM name=form action="menu.html" method="post">
+	<header class="w3-container w3-red">
+	<img src="logo.png" class="w3-round-small">
+	</header>
+	<FORM name=form action="menu.php" method="post">
 	<?php
 		$codigo = $_POST['codigo'];
 		$tipo = $_POST['tipo'];
@@ -131,7 +136,8 @@
 		}
 	?>
     <br>
-	<td><input type="submit" name="regresar" value="Regresar" /></td>
+	<td><input type="submit" name="regresar" value="Regresar" 
+    class="w3-btn w3-round-xxlarge w3-red w3-text-shadow"/></td>
 	</FORM>
 	</BODY>	
 </HTML>
